@@ -43,7 +43,7 @@ curl http://localhost:8080/pokemon/translated/charmander
 
 ### Tech stack
 - Golang
-- Chi Router
+- Chi
 - Testify
 
 ### Resources
