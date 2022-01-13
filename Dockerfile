@@ -1,20 +1,19 @@
-FROM alpine:3.12
+FROM golang:1.17
 
-WORKDIR /app
+# Set the Current Working Directory inside the container
+WORKDIR $GOPATH/src/github.com/imogen-k/Pokedex
 
-FROM docker:dind
-RUN apk add --no-cache go
-RUN go version
+# Copy everything from the current directory to the PWD (Present Working Directory) inside the container
+COPY . .
 
-COPY go.mod ./
-COPY go.sum ./
-RUN go mod download
+# Download all the dependencies
+RUN go get -d -v ./...
 
-# Copy everything from the current directory to the PWD(Present Working Directory) inside the container
-COPY . ./
+# Install the package
+RUN go install -v ./...
 
 # This container exposes port 8080 to the outside world
 EXPOSE 8080
 
 # Run the executable
-CMD ["/pokedex"]
+CMD ["cmd"]
