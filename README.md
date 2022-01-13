@@ -69,6 +69,14 @@ curl http://localhost:8080/pokemon/charmander
 
 <br>
 
+### Run tests
+
+```bash 
+go test ./...
+```
+
+<br>
+
 ### Tech stack
 - Golang
 - Chi
@@ -81,6 +89,7 @@ curl http://localhost:8080/pokemon/charmander
 - https://funtranslations.com/api/yoda
 - https://funtranslations.com/api/#shakespeare
 
+<br>
 
 ### To make this API Production-ready
 
