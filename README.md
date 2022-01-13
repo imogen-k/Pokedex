@@ -80,3 +80,9 @@ curl http://localhost:8080/pokemon/charmander
 - https://pokeapi.co/
 - https://funtranslations.com/api/yoda
 - https://funtranslations.com/api/#shakespeare
+
+
+### To make this API Production-ready
+
+- Use HTTP status codes consistently across the API
+- Improve error handling - return specific error messages
