@@ -41,6 +41,28 @@ curl http://localhost:8080/pokemon/charmander
 curl http://localhost:8080/pokemon/translated/charmander
 ```
 
+### Build docker image & run locally
+
+Build docker image
+
+```bash
+docker build . -t pokedex
+```
+
+Run service on port 8080
+
+```bash
+docker run -p 8080:8080 pokedex
+```
+
+Visit in browser or via cURL command
+
+http://localhost:8080/pokemon/metapod
+
+```bash 
+curl http://localhost:8080/pokemon/charmander
+```
+
 ### Tech stack
 - Golang
 - Chi
