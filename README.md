@@ -6,6 +6,7 @@ The API has two main endpoints:
 1. Return basic Pokémon information.
 2. Return basic Pokémon information but with a 'fun' translation of the Pokémon Description.
 
+<br>
 
 ### Run services locally
 
@@ -20,7 +21,8 @@ Run service on port 8080
 go run cmd/main.go
 ```
 
-### Visit in browser
+
+#### Visit in browser
 
 localhost:8080/pokemon/{name}
 
@@ -32,7 +34,7 @@ localhost:8080/pokemon/translated/{name}
 e.g. http://localhost:8080/pokemon/translated/metapod
 
 
-### cURL command to call services
+#### cURL command to call services
 
 ```bash 
 curl http://localhost:8080/pokemon/charmander
@@ -41,12 +43,14 @@ curl http://localhost:8080/pokemon/charmander
 curl http://localhost:8080/pokemon/translated/charmander
 ```
 
+<br>
+
 ### Build docker image & run locally
 
 Build docker image
 
 ```bash
-docker build . -t pokedex
+docker image build -t pokedex .
 ```
 
 Run service on port 8080
@@ -63,10 +67,14 @@ http://localhost:8080/pokemon/metapod
 curl http://localhost:8080/pokemon/charmander
 ```
 
+<br>
+
 ### Tech stack
 - Golang
 - Chi
 - Testify
+
+<br>
 
 ### Resources
 - https://pokeapi.co/
