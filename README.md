@@ -7,7 +7,7 @@ The API has two main endpoints:
 2. Return basic Pokémon information but with a 'fun' translation of the Pokémon Description.
 
 
-### Run Services Locally
+### Run services locally
 
 Clone the repository
 
