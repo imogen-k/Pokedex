@@ -8,7 +8,14 @@ The API has two main endpoints:
 
 <br>
 
-### Run services locally
+### Requirements to run
+
+- You have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed
+- You have [go](https://go.dev/doc/install) installed
+
+<br>
+
+### Run service locally
 
 Clone the repository
 
@@ -95,3 +102,6 @@ go test ./...
 
 - Use HTTP status codes consistently across the API
 - Improve error handling - return specific error messages
+- Add service tests
+- Add logging 
+- Add healthchecker 
