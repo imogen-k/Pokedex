@@ -2,10 +2,10 @@ package handlers
 
 import (
 	"encoding/json"
+	"github.com/go-chi/chi/v5"
 	"io/ioutil"
 	"net/http"
 	"net/url"
-	"strings"
 )
 
 type GetTranslatedPokemonDescriptionHandler struct {
@@ -26,7 +26,7 @@ type TranslatedDescriptionResponse struct {
 
 // Handle GET /pokemon/translated/{name}
 func (p *GetTranslatedPokemonDescriptionHandler) Handle(w http.ResponseWriter, r *http.Request) {
-	name := strings.TrimPrefix(r.URL.Path, "/pokemon/translated/")
+	name := chi.RouteContext(r.Context()).URLParam("name")
 
 	// find pokemon species URL with pokemon name
 	url, err := GetSpeciesUrlFromName(name)
